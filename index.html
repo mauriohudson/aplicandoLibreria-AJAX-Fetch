@@ -49,13 +49,13 @@
         <button id="comprarProducto" class="boton-agregar comprarProducto">Finalizar Compra</button>
       </div>
     </div>
-    <div class="payment">
+    <div id="form" class="payment">
       <h1 class="payTitle">Informacion Personal</h1>
-      <label for="">Nomber y apellido</label>
+      <label for="" id="name">Nomber y apellido</label>
       <input type="text" placeholder="Perez Mauricio" class="payInput">
-      <label for="">Numero de telefono</label>
-      <input type="text" placeholder="11 22233320" class="payInput">
-      <label for="">Dierccion</label>
+      <label for="" id="email">E-mail</label>
+      <input type="text" placeholder="your@gmail.com" class="payInput">
+      <label for="" id="di">Dierccion</label>
       <input type="text" placeholder="Catamarca 341" class="payInput">
       <h1 class="payTitle">Informacion de tarjeta</h1>
       <div class="CardIcons d-flex">
@@ -68,7 +68,8 @@
         <input type="text" placeholder="Año" class="payInput sm">
         <input type="text" placeholder="cvv" class="payInput sm">
       </div>
-      <button id="payButton" class="payButton">Pagar</button>
+      <button type="submit" id="payButton" class="payButton">Pagar</button>
+      <p class="warnings" id="warnings"></p>
       <span class="close">X</span>
     </div>
 
@@ -85,6 +86,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="sweet.js"></script>
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script> -->
   </body>
 </html>

@@ -165,8 +165,8 @@ p {
 
 .payment{
   z-index: 1;
-  width: 600px;
-  height: 600px;
+  width: 700px;
+  height: 700px;
   background-color: white;
   position: absolute;
   top: 0;
@@ -250,4 +250,11 @@ label{
   justify-content: center;
   cursor: pointer;
   padding: 2px;
+}
+
+.warnings {
+  width: 200px;
+  text-align: center;
+  margin: auto;
+  color: red;
 }
