@@ -18,3 +18,18 @@ contenedorModal.addEventListener('click', (event) =>{
 modalCarrito.addEventListener('click', (event) => {
     event.stopPropagation()
 })
+
+
+
+
+const comprarProducto = document.querySelector(".comprarProducto");
+const payment = document.querySelector(".payment");
+const close = document.querySelector(".close");
+
+ comprarProducto.addEventListener("click",()=>{
+   payment.style.display="flex"
+ });
+
+ close.addEventListener("click",()=>{
+   payment.style.display="none"
+ });

@@ -124,5 +124,5 @@ const actualizarCarrito = () => {
   });
   contadorCarrito.innerText = carrito.length
   precioTotal.innerText = carrito.reduce((acc, prod)=> acc + prod.precio, 0)
-
 };
+
