@@ -1,8 +1,8 @@
 function mostrarAlerta(){
     Swal.fire({
-        position: 'center',
+        position: 'top-end',
         icon: 'success',
-        title: 'Muchas gracias, te lo llevamos a la mesa!',
+        title: 'Your work has been saved',
         showConfirmButton: false,
         timer: 1500
       })
