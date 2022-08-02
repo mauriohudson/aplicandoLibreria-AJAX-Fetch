@@ -1,47 +1,26 @@
-let stockProductos = [
-  {
-    id: 1,
-    nombre: "Cafe",
-    cantidad: 1,
-    precio: 110,
-    imagen: "img/cafeleche.png",
-  },
-  {
-    id: 2,
-    nombre: "Capuccino",
-    cantidad: 1,
-    precio: 150,
-    imagen: "img/capuccinoItaliano.png",
-  },
-  {
-    id: 3,
-    nombre: "Te",
-    cantidad: 1,
-    precio: 110,
-    imagen: "img/teComun.png",
-  },
-  {
-    id: 4,
-    nombre: "Malteada",
-    cantidad: 1,
-    precio: 150,
-    imagen: "img/img2.png",
-  },
-  {
-    id: 5,
-    nombre: "Muffin",
-    cantidad: 1,
-    precio: 70,
-    imagen: "img/muffindulcedeleche.png",
-  },
-  {
-    id: 6,
-    nombre: "Medialunas",
-    cantidad: 1,
-    precio: 50,
-    imagen: "img/medialunamanteca.png",
-  },
-];
+let stockProductos = [];
+
+fetch("data.json")
+  .then((res) => res.json())
+  .then((data) => {
+    cargarProductos(data);
+  });
+
+const cargarProductos = (data) =>{
+  stockProductos = data;
+  stockProductos.forEach((producto) => {
+    const div = document.createElement("div");
+    div.className = "producto";
+    div.innerHTML = `
+      <img src=${producto.imagen} alt="">
+      <h3> ${producto.nombre}</h3>
+      <p class="precioProducto"> Precio: $ ${producto.precio}</p>
+      <button onClick="agregarAlCarrito(${producto.id})" class="boton-agregar">Agregar</button>
+      `;
+  
+    contenedorProductos.appendChild(div);
+  });
+}
 
 const contenedorProductos = document.getElementById("contenedor-productos");
 
@@ -62,18 +41,6 @@ botonVaciar.addEventListener('click', ()=> {
   actualizarCarrito()
 })
 
-stockProductos.forEach((producto) => {
-  const div = document.createElement("div");
-  div.className = "producto";
-  div.innerHTML = `
-    <img src=${producto.imagen} alt="">
-    <h3> ${producto.nombre}</h3>
-    <p class="precioProducto"> Precio: $ ${producto.precio}</p>
-    <button onClick="agregarAlCarrito(${producto.id})" class="boton-agregar">Agregar</button>
-    `;
-
-  contenedorProductos.appendChild(div);
-});
 
 let carrito = [];
 

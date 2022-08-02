@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "nombre": "Cafe",
+        "cantidad": 1,
+        "precio": 110,
+        "imagen": "img/cafeleche.png"
+      },
+      {
+        "id": 2,
+        "nombre": "Capuccino",
+        "cantidad": 1,
+        "precio": 150,
+        "imagen": "img/capuccinoItaliano.png"
+      },
+      {
+        "id": 3,
+        "nombre": "Te",
+        "cantidad": 1,
+        "precio": 110,
+        "imagen": "img/teComun.png"
+      },
+      {
+        "id": 4,
+        "nombre": "Malteada",
+        "cantidad": 1,
+        "precio": 150,
+        "imagen": "img/img2.png"
+      },
+      {
+        "id": 5,
+        "nombre": "Muffin",
+        "cantidad": 1,
+        "precio": 70,
+        "imagen": "img/muffindulcedeleche.png"
+      },
+      {
+        "id": 6,
+        "nombre": "Medialunas",
+        "cantidad": 1,
+        "precio": 50,
+        "imagen": "img/medialunamanteca.png"
+      }
+]
